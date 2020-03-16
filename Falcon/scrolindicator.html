@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/scrollindicator.jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        .scrollindicator,
+        .scrollindicator-ie {
+            width: 100%;
+            height: 10px;
+            display: block;
+            border: none;
+            z-index: 500;
+            background: #eee;
+            color: #337ab7;
+        }
+        
+        progress.scrollindicator,
+        progress.scrollindicator-ie {
+            margin-bottom: 20px;
+            position: fixed;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        progress.scrollindicator::-webkit-progress-bar,
+        progress.scrollindicator-ie::-webkit-progress-bar {
+            background-color: transparent;
+        }
+        
+        progress.scrollindicator::-webkit-progress-value,
+        progress.scrollindicator-ie::-webkit-progress-value {
+            background-color: #337ab7;
+        }
+        
+        progress.scrollindicator::-moz-progress-bar,
+        progress.scrollindicator-ie::-moz-progress-bar {
+            background-color: #337ab7;
+        }
+        
+        .scrollindicator-ie span {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-indent: -9999px;
+            background: #337ab7;
+        }
+    </style>
+</body>
+
+</html>
