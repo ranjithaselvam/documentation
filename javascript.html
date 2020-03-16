@@ -1,0 +1,63 @@
+<html>
+
+<body>
+   <script type="text/javascript">
+
+      var a = 33;
+      var b = 10;
+      var linebreak = "<br />";
+
+      document.write("Value of a => (a = b) => ");
+      result = (a = b);
+      document.write(result);
+      document.write(linebreak);
+
+      document.write("Value of a => (a += b) => ");
+      result = (a += b);
+      document.write(result);
+      document.write(linebreak);
+
+      document.write("Value of a => (a -= b) => ");
+      result = (a -= b);
+      document.write(result);
+      document.write(linebreak);
+
+      document.write("Value of a => (a *= b) => ");
+      result = (a *= b);
+      document.write(result);
+      document.write(linebreak);
+
+      document.write("Value of a => (a /= b) => ");
+      result = (a /= b);
+      document.write(result);
+      document.write(linebreak);
+
+      document.write("Value of a => (a %= b) => ");
+      result = (a %= b);
+      document.write(result);
+      document.write(linebreak);
+
+
+      var count;
+      for (count = 0; count < 5; count++) {
+         document.write("current count is :" + count);
+         document.write(linebreak)
+      }
+
+      var x = 1;
+      document.write("Entering the loop<br /> ");
+
+      while (x < 10) {
+         x = x + 1;
+
+         if (x == 5) {
+            continue;   // skip rest of the loop body
+         }
+         document.write(x + "<br />");
+      }
+      document.write("Exiting the loop!<br /> ");
+   </script>
+   
+</body>
+
+</html>
