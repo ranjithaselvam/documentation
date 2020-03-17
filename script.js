@@ -205,9 +205,12 @@ $(document).on("click", ".toggle-text-button", function() {
 
 function alert() {
     if (window.confirm("Yes/No")) {
-        window.open("FalconDocument/Falcon UI - User Guide.pdf", "Thank You");
-    } else {
-        window.confirm.close();
+        // window.open("FalconDocument/Falcon UI - User Guide.pdf", "Thank You");
+        if (confirm == true) {
+            document.getElementById('download').click();
+        } else {
+            window.confirm.close();
+        }
     }
 }
 
@@ -215,12 +218,31 @@ function alert() {
 
 // Get the modal
 
-var modal = document.getElementById('id01');
+var signUp = document.getElementById('id01');
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
 
-    if (event.target == modal) {
+    if (event.target == signUp) {
         modal.scrollTop = window.scrollTo(0, 0);
         modal.style.display = "none";
+    }
+}
+
+
+
+
+/**SAMPLE DEMO JAVASCRIPT FOR DOWNLOAD */
+function getConfirmation() {
+    var $idown;
+    var retVal = confirm("Do you want to continue ?");
+    if (retVal == true) {
+        var save = document.getElementById("example").value;
+        var blob = new Blob([save], {
+            // type: "text/pdf;charset=utf-8"
+        });
+        saveAs(blob, "Falcon\FalconDocument.zip");
+
+    } else {
+        $idown = $('<iframe>', { id: 'idown', src: 'Falcon\FalconDocument.zip' }).hide().appendTo('body');
     }
 }
